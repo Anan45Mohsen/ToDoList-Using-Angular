@@ -1,0 +1,8 @@
+<div class="container">
+    <h2 class="text-center">Add a New Task</h2>
+    <input #taskTitle type="text" class="form-control" placeholder="write the task title here">
+    <textarea #taskDescription class="form-control" placeholder="Write the description"></textarea>
+    <button class="btn btn-success" (click)="saveTask(taskTitle , taskDescription)">Save</button>
+    <a class="btn btn-danger" href="/">Cancel</a>
+</div>
+

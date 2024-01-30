@@ -1,0 +1,39 @@
+
+<div class="container border border-danger border-3">
+   <blockquote class="blockquote text-center">
+    <p> List of Tasjs</p>
+    <footer class="blockquote-footer">No pain No gain</footer>
+
+   </blockquote>
+    <div *ngIf="taskservices.tasks.length == 0">
+        <p class="alert alert-danger">
+           No tasks found today
+        </p>
+       </div>
+       
+       <div *ngIf="taskservices.tasks.length != 0">
+           <ul class="list-group border border-warning border-3">
+               <li *ngFor="let task of taskservices.tasks; index as i" class="list-group-item">
+                  <a [href]="['/task',i]">
+                    {{task.title}}
+                  </a> 
+                   <button class=" del-button btn btn-danger" (click)="deleteTask(i)">Delete</button>
+               </li>
+           </ul>
+       </div>
+       
+    <div>
+        <a href="/add-task" class="form-control add-task-button btn btn-secondary">Add Task</a>
+
+    </div>
+
+</div>
+<div class="author-box fade-in-box">
+    <div class="container">
+        <p>To Do List Project Using Angular</p>
+        <p>Create By : Anan Mohsen Mahmoud</p>
+        <p>&copy; Copyrights 2024</p>
+    </div>
+
+</div>
+
